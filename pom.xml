@@ -2,7 +2,8 @@
 <project xmlns="http://schemas.maven.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://schemas.maven.org/POM/4.0.0
-         http://schemas.maven.org/xsd/maven-4.0.0.xsd">
+         http://schemas.maven.org/xsd/maven-4.0.0.xsd
+         http://schemas.maven.org/POM/4.0.0 ">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.narxoz</groupId>

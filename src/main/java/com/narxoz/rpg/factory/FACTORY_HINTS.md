@@ -13,13 +13,20 @@ You need to create different character types, but the client code shouldn't know
 
 2. **How do you avoid if-else chains?**
    ```java
-   // BAD - violates Open/Closed Principle:
-   if (type.equals("warrior")) {
-       return new Warrior();
-   } else if (type.equals("mage")) {
-       return new Mage();
-   }
-   ```
+
+[//]: # (   // BAD - violates Open/Closed Principle:)
+
+[//]: # (   if &#40;type.equals&#40;"warrior"&#41;&#41; {)
+
+[//]: # (       return new Warrior&#40;&#41;;)
+
+[//]: # (   } else if &#40;type.equals&#40;"mage"&#41;&#41; {)
+
+[//]: # (       return new Mage&#40;&#41;;)
+
+[//]: # (   })
+
+[//]: # (   ```)
 
    Think: Can inheritance help here?
 
