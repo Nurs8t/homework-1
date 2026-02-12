@@ -9,19 +9,41 @@ import com.narxoz.rpg.factory.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("=== RPG Character & Equipment System ===\n");
+        System.out.println("=== RPG SYSTEM ===\n");
 
-        CharacterFactory warriorFactory = new WarriorFactory();
-        CharacterFactory mageFactory = new MageFactory();
-        CharacterFactory archerFactory = new ArcherFactory();
+        CharacterFactory wf = new WarriorFactory();
+        CharacterFactory mf = new MageFactory();
+        CharacterFactory af = new ArcherFactory();
 
-        Character warrior = warriorFactory.createCharacter("Arthur");
-        Character mage = mageFactory.createCharacter("Merlin");
-        Character archer = archerFactory.createCharacter("Legolas");
+        Character w = wf.createCharacter("Arthur");
+        Character m = mf.createCharacter("Merlin");
+        Character a = af.createCharacter("Legolas");
 
-        System.out.println("✓ Warrior created: " + warrior.getName());
-        System.out.println("✓ Mage created: " + mage.getName());
-        System.out.println("✓ Archer created: " + archer.getName());
-        System.out.println();
+        EquipmentFactory medieval = new MedievalEquipmentFactory();
+        EquipmentFactory magic = new MagicEquipmentFactory();
+        EquipmentFactory ranger = new RangerEquipmentFactory();
+
+        EquipmentSet ws = medieval.createSet();
+        EquipmentSet ms = magic.createSet();
+        EquipmentSet rs = ranger.createSet();
+
+        w.equipWeapon(ws.getWeapon());
+        w.equipArmor(ws.getArmor());
+        m.equipWeapon(ms.getWeapon());
+        m.equipArmor(ms.getArmor());
+        a.equipWeapon(rs.getWeapon());
+        a.equipArmor(rs.getArmor());
+
+        w.displayStats();
+        w.displayEquipment();
+        m.displayStats();
+        m.displayEquipment();
+        a.displayStats();
+        a.displayEquipment();
+
+        System.out.println("\n✓ Factory Method: 3 characters");
+        System.out.println("✓ Abstract Factory: 3 sets");
+        System.out.println("✓ ENUM: CharacterType, EquipmentTheme");
+        System.out.println("\n=== DONE ===");
     }
 }
