@@ -1,4 +1,6 @@
-package com.narxoz.rpg.equipment;
+package com.narxoz.rpg.equipment.medieval;
+
+import com.narxoz.rpg.equipment.Weapon;
 
 public class IronSword implements Weapon {
 

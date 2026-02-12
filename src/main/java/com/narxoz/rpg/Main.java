@@ -44,6 +44,36 @@ public class Main {
         System.out.println("\n✓ Factory Method: 3 characters");
         System.out.println("✓ Abstract Factory: 3 sets");
         System.out.println("✓ ENUM: CharacterType, EquipmentTheme");
-        System.out.println("\n=== DONE ===");
+
+        MagicStaff staff = new MagicStaff("Archmage Staff", 40);
+        staff.displayInfo();
+        System.out.println();
+
+        System.out.println("✓ Factory Method: 3 characters");
+        System.out.println("✓ Abstract Factory: 3 sets");
+        System.out.println("✓ MagicStaff: " + staff.getName() + " (" + staff.getDamage() + " dmg)");
+
+        IronSword ironSword = new IronSword();
+        ironSword.displayInfo();
+        System.out.println("Weapon name: " + ironSword.getName());
+        System.out.println("Weapon type: " + ironSword.getWeaponType());
+        System.out.println();
+
+        System.out.println("✓ Factory Method: 3 characters");
+        System.out.println("✓ Abstract Factory: 3 sets");
+        System.out.println("✓ Iron Sword: " + ironSword.getDamage() + " dmg");
+
+
+        RangerLeatherArmor armor = new RangerLeatherArmor("Forest Keeper", 45);
+        armor.displayInfo();
+        System.out.println("Armor name: " + armor.getName());
+        System.out.println("Defense: " + armor.getDefense());
+        System.out.println("Armor type: " + armor.getArmorType());
+        System.out.println();
+
+        System.out.println("✓ Factory Method: 3 characters");
+        System.out.println("✓ Abstract Factory: 3 sets");
+        System.out.println("✓ Ranger Armor: " + armor.getName() + " (" + armor.getDefense() + " def)");
+
     }
 }
